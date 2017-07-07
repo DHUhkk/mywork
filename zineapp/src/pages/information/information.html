@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button (click)="hpage()" clear>  
+      <ion-icon name='arrow-back'></ion-icon>
+      返回
+    </button>
+    <ion-title>
+      个人信息
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-avatar>
+    <div align="center">
+    <img src="assets/img/fly.jpg" style="height:20%;width:20%" (click)="ppage()">
+    进击吧，科科
+    </div>
+    <div align="end">
+      <ion-icon name="arrow-forward" style="font-size:18px;color:dimgrey">
+      </ion-icon>
+    </div>
+    <div align="center">
+      <button ion-button color="danger">升级会员</button>
+    </div>
+  </ion-avatar>
+
+  <ion-list>
+    <ion-item>
+      <ion-label >
+        允许在移动网络下同步
+      </ion-label>
+      <ion-toggle style="font-size: 18px" checked="true"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>  
+    <ion-item>
+      <button ion-button clear style="font-size:18px" color="dark">
+          购买会员
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        会员特权
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        获取Zine币
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        虚拟物品
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>  
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        垃圾箱
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        购买字体
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        编辑器偏好位置
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        语音识别设置
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        常见问题解答
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label >
+        锁屏密码
+      </ion-label>
+      <ion-toggle style="font-size:18px" checked="false"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        给我们打分
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        意见反馈
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark">
+        关于Zine
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item> 
+      <button ion-button clear style="font-size:18px" color="dark" (click)="altre()">
+        退出登录
+      </button>
+      <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

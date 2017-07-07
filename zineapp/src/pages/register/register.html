@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <div>
+        <button ion-button clear  style="font-size:15px;color:aliceblue" (click)="openEnter()">
+            <ion-icon name="arrow-back"></ion-icon>
+                返回
+        </button>
+        </div>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-input type="text" placeholder="请输入你常用的邮箱" style="font-size:14px"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="password" placeholder="请设置密码（6-16位）" style="font-size:14px"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div>
+        <button ion-button full color="dark">注册</button>
+    </div>
+    <p style="color:black">我已阅读并遵守“Zine”的服务条款和隐私政策</p>
+</ion-content>

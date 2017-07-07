@@ -1,0 +1,214 @@
+<ion-header>
+  <ion-navbar color="dark"> 
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+        <ion-icon name="create-outline"  (click)="backPage()" style="font-size:30px;color:aliceblue" ></ion-icon>
+        </ion-col>
+        <ion-col>
+    <ion-segment [(ngModel)]="select">
+      <ion-segment-button value="star">
+        <ion-icon name="star-outline"></ion-icon> 
+      </ion-segment-button>
+
+      <ion-segment-button value="person">
+        <ion-icon name="person-outline"></ion-icon> 
+      </ion-segment-button>
+
+      <ion-segment-button value="text">
+        <ion-icon name="text-outline"></ion-icon> 
+      </ion-segment-button>
+
+      <ion-segment-button value="search">
+        <ion-icon name="search"></ion-icon> 
+      </ion-segment-button>
+    </ion-segment>
+        </ion-col>  
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div [ngSwitch]="select">
+
+    <ion-list  *ngSwitchCase="'search'">   
+      <ion-searchbar placeholder="搜素专栏或文章" ></ion-searchbar>
+
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/fly.jpg">
+        </ion-avatar>
+        <ion-row>
+            <h2 style="color:cyan">进击吧，科科</h2>
+            <p>发布了文章</p>
+        </ion-row>
+        <p>4天前</p>
+      </ion-item>
+
+      <img src="assets/img/5.jpg">
+
+      <ion-card-content>
+        <h3> 量子力学可能崩塌你的科学世界观</h3>
+        <p>朱清时院士（资料图）<br>
+        文：朱清时
+        量子力学可能崩塌你的“科学”世界观：人类的意思是……</p>
+      </ion-card-content>
+
+        <ion-grid>
+          <ion-row justify-content-end>
+        <ion-col col-2>
+          <button ion-button  clear small>
+            <ion-icon name="thumbs-up-outline" style="color:black" (tap)=tapEvent($event)></ion-icon>
+              <div style="color:black">{{tap}}</div>
+          </button>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button icon-right clear small>
+            <ion-icon name="heart-outline" style="color:black" ></ion-icon>
+              <div style="color:black">5</div>
+          </button>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button icon-right clear small>
+            <ion-icon name="text-outline" style="color:black"></ion-icon>
+              <div style="color:black">7</div>
+          </button>
+        </ion-col>
+          </ion-row>
+        </ion-grid>
+
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/3.jpg">
+        </ion-avatar>
+        <ion-row>
+            <h2 style="color:cyan">Moti Lau</h2>
+            <p>发布了文章</p>
+        </ion-row>
+        <p>6天前</p>
+      </ion-item>
+
+      <img src="assets/img/6.jpg">
+
+      <ion-card-content>
+        <h3>奢华级香薰蜡烛分享</h3>
+        <p>TEG<br>
+        TEG本来是卖茶叶的，所卖的茶叶被称为茶叶中的LV，</p>
+      </ion-card-content>
+
+        <ion-grid>
+          <ion-row justify-content-end>
+        <ion-col col-2>
+          <button ion-button  clear small>
+            <ion-icon name="thumbs-up-outline" style="color:black" (tap1)=tap1Event($event)></ion-icon>
+              <div style="color:black">{{tap1}}</div>
+          </button>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button icon-right clear small>
+            <ion-icon name="heart-outline" style="color:black" ></ion-icon>
+              <div style="color:black">2</div>
+          </button>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button icon-right clear small>
+            <ion-icon name="text-outline" style="color:black"></ion-icon>
+              <div style="color:black">3</div>
+          </button>
+        </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        </ion-card>
+        </ion-list>
+
+
+       <ion-list  *ngSwitchCase="'text'"> 
+          <ion-list>
+            <ion-item>
+              <ion-icon name="person-add" item-start></ion-icon>
+              你有0个新的订阅
+              <ion-icon name="arrow-forward" item-end></ion-icon>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="heart" item-start></ion-icon>
+              0个人收藏了你的文章
+              <ion-icon name="arrow-forward" item-end></ion-icon>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="thumbs-up" item-start></ion-icon>
+              0个人赞了你的文章
+              <ion-icon name="arrow-forward" item-end></ion-icon>
+            </ion-item>
+          </ion-list>
+       </ion-list> 
+
+       <ion-list  *ngSwitchCase="'person'">
+         <div>
+           <img src="assets/img/7.jpg">
+         </div>
+         <div align="center">
+          <img src="assets/img/图片1.png" style="height:80px;width:80px">
+         </div>
+         <ion-grid>
+          <ion-row justify-content-end>
+            <ion-col col-2>
+             <ion-icon name="settings" style="color:dimgrey;font-size:30px" large></ion-icon>
+             </ion-col>
+          </ion-row>
+         </ion-grid>
+         <ion-title>
+      进击吧，科科
+    </ion-title>   
+    <ion-grid>
+          <ion-row justify-content-end>
+            <ion-col col-7>
+             男
+             <ion-icon name="pin" style="color:dimgray"> </ion-icon>
+             未知
+             </ion-col>
+          </ion-row>
+         </ion-grid>
+    <ion-grid>
+          <ion-row justify-content-end>
+            <ion-col col-10>
+             考研党，有些小脾性，爱文字与摄影。
+             </ion-col>
+          </ion-row>
+         </ion-grid>
+         <ion-grid>
+          <ion-row justify-content-around>
+            <ion-col col-3>
+             <button ion-button clear style="color:coral;font-size:30px">20</button>
+             <div> 订阅</div>
+             </ion-col>
+             <ion-col col-3>
+             <button ion-button clear style="color:coral;font-size:30px">0</button>
+             <div>订阅者 </div>
+             </ion-col>
+          </ion-row>
+         </ion-grid>
+       </ion-list> 
+
+
+       <ion-list  *ngSwitchCase="'star'" class="card-background-page">
+         <ion-card>
+           <img src="assets/img/8.jpg"/>
+           <div class="card-title">校园风光</div>
+           <div class="card-subtitle">随着清晨的第一缕阳光的来临，初春的树木焕发出光彩。</div>
+        </ion-card>
+
+        <ion-card>
+           <img src="assets/img/9.jpg"/>
+           <div class="card-title">九寨沟</div>
+           <div class="card-subtitle">湖</div>
+        </ion-card>
+
+       </ion-list>
+    </div>
+</ion-content>

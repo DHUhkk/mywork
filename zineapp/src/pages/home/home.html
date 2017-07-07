@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-grid>  
+      <ion-row justify-content-between>
+        <ion-col col-2>
+          <div>
+            <img src="assets/img/图片1.png" (click)="openInformation()" style="width:40px;height:40px">
+          </div>
+        </ion-col>
+    <ion-col col-8>
+      <div>
+      <button ion-button (click)="openInformation()">  
+        进击吧，科科
+      </button>
+      </div>
+      </ion-col>
+      <ion-col col-2>
+        <div>
+    <button ion-button block (click)="openColumn()">  
+        专栏
+    </button>
+        </div>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row >
+      <ion-col>
+        <div>
+    <img src="assets/img/zine.jpg" style="width:150px; height:200px" (click)="openAdd()">
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <img src="assets/img/up.jpg" style="width:150px; height:200px" (click)="warn('middle')"/>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>  
+    <ion-item>  
+      <button ion-button clear style="font-size:18px" (click)="openExample()" >
+        <ion-icon name="glasses-outline">
+        </ion-icon>
+        <div style="color:black">
+        例文
+        </div></button>
+        <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey"></ion-icon>
+    </ion-item>
+    <ion-item>  
+      <button ion-button (click)="openEdit()" clear style="font-size:18px">
+        <ion-icon name="paper-outline" ></ion-icon>
+        <div style="color:black">
+        文章
+        </div></button>
+        <ion-icon name="arrow-forward" item-end style="font-size:18px;color:dimgrey">
+        </ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
